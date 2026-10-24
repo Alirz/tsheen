@@ -1,8 +1,41 @@
 import zlib from "node:zlib";
-import { compileSchema, decodeBinarySchema } from "kiwi-schema";
+import { ByteBuffer, compileSchemaJS, decodeBinarySchema } from "kiwi-schema";
 import { FIG_MAGIC, FIG_VERSION, MESSAGE_MAX_BYTES, SCHEMA_MAX_BYTES } from "./limits.mjs";
 
 const ZSTD_MAGIC = Buffer.from([0x28, 0xb5, 0x2f, 0xfd]);
+
+function unreadByteCount(bb) {
+  const dataLength = bb?._data?.length;
+  const index = bb?._index;
+  const logicalLength = bb?.length;
+  if (
+    !Number.isInteger(dataLength) ||
+    !Number.isInteger(index) ||
+    !Number.isInteger(logicalLength) ||
+    index < 0
+  ) {
+    throw new Error("Kiwi array length exceeds the unread bytes.");
+  }
+  return Math.min(dataLength, logicalLength) - index;
+}
+
+function kiwiBoundedArray(bb, length) {
+  if (!Number.isInteger(length) || length < 0 || length > unreadByteCount(bb)) {
+    throw new Error("Kiwi array length exceeds the unread bytes.");
+  }
+  return new Array(length);
+}
+
+function compileBoundedSchema(schema) {
+  const source = compileSchemaJS(schema);
+  const rewritten = source.replaceAll("= Array(length);", "= exports.kiwiBoundedArray(bb, length);");
+  if (rewritten.includes("Array(length)")) {
+    throw new Error("Kiwi schema still allocates Array(length).");
+  }
+  const compiled = { ByteBuffer, kiwiBoundedArray };
+  new Function("exports", rewritten)(compiled);
+  return compiled;
+}
 
 function readChunks(canvas) {
   if (canvas.length < 12 || canvas.subarray(0, 8).toString("ascii") !== FIG_MAGIC) {
@@ -58,7 +91,7 @@ function decodeMessage(chunk, schema) {
   if (inflated.length > MESSAGE_MAX_BYTES) {
     throw new Error("Inflated message exceeds the size ceiling.");
   }
-  const message = compileSchema(schema).decodeMessage(new Uint8Array(inflated));
+  const message = compileBoundedSchema(schema).decodeMessage(new Uint8Array(inflated));
   if (!message || message.type !== "NODE_CHANGES" || !Array.isArray(message.nodeChanges)) {
     throw new Error("Decoded message is not NODE_CHANGES.");
   }

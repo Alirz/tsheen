@@ -1,5 +1,13 @@
 {
   "applications": {
+    "Tsheen.AuthServer": {
+      "type": "dotnet-project",
+      "launchUrl": "https://localhost:44366",
+      "path": "../../../src/Tsheen.AuthServer/Tsheen.AuthServer.csproj",
+      "execution": {
+        "order": 3
+      }
+    },
     "Tsheen.HttpApi.Host": {
       "type": "dotnet-project",
       "launchUrl": "https://localhost:44365",

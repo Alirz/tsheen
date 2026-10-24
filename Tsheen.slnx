@@ -11,6 +11,7 @@
         <Project Path="src/Tsheen.HttpApi/Tsheen.HttpApi.csproj" />
         <Project Path="src/Tsheen.HttpApi.Client/Tsheen.HttpApi.Client.csproj" />
         <Project Path="src/Tsheen.HttpApi.Host/Tsheen.HttpApi.Host.csproj" />
+        <Project Path="src/Tsheen.AuthServer/Tsheen.AuthServer.csproj" />
         <Project Path="src/Tsheen.DbMigrator/Tsheen.DbMigrator.csproj" />
     </Folder>
     <Folder Name="/test/">
@@ -19,5 +20,6 @@
         <Project Path="test/Tsheen.TestBase/Tsheen.TestBase.csproj" />
         <Project Path="test/Tsheen.Domain.Tests/Tsheen.Domain.Tests.csproj" />
         <Project Path="test/Tsheen.HttpApi.Client.ConsoleTestApp/Tsheen.HttpApi.Client.ConsoleTestApp.csproj" />
+        <Project Path="test/Tsheen.HttpApi.Host.Tests/Tsheen.HttpApi.Host.Tests.csproj" />
     </Folder>
 </Solution>

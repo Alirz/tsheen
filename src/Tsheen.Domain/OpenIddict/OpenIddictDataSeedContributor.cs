@@ -81,7 +81,10 @@ public class OpenIddictDataSeedContributor : OpenIddictDataSeedContributorBase, 
                     "LinkLogin",
                     "Impersonation"
                 },
-                scopes: commonScopes,
+                scopes: new List<string>(commonScopes)
+                {
+                    OpenIddictConstants.Scopes.OfflineAccess
+                },
                 redirectUris: new List<string> { appClientRootUrl, $"{appClientRootUrl}/silent-renew.html" },
                 postLogoutRedirectUris: new List<string> { appClientRootUrl },
                 clientUri: appClientRootUrl,
