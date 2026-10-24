@@ -1,0 +1,10 @@
+---
+description: Tsheen UI work must follow the written Figma standard
+alwaysApply: true
+---
+
+This rule applies to UI work only (`apps/react` and other Figma-derived UI).
+
+Before UI work, load `.cursor/skills/tsheen-figma-ui/SKILL.md` and follow the standard it points to.
+
+Read that standard from the project MCP `tsheen-figma` (`tools/tsheen-figma-mcp`) with `get_tokens`, `get_typography`, `get_component`, and `list_sections`. Do not invent tokens.

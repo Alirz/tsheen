@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "tsheen-figma": {
+      "command": "node",
+      "args": ["tools/tsheen-figma-mcp/server.mjs"]
+    }
+  }
+}

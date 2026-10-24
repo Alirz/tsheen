@@ -1,0 +1,18 @@
+{
+  "application": {
+    "baseUrl": "https://localhost:3000",
+    "name": "Tsheen"
+  },
+  "oAuthConfig": {
+    "issuer": "https://localhost:44365/",
+    "redirectUri": "https://localhost:3000",
+    "clientId": "Tsheen_App",
+    "scope": "offline_access openid profile email phone roles Tsheen"
+  },
+  "apis": {
+    "default": {
+      "url": "https://localhost:44365",
+      "rootNamespace": "Tsheen"
+    }
+  }
+}

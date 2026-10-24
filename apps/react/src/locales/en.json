@@ -1,0 +1,11 @@
+{
+  "Menu:Home": "Home",
+  "Menu:App": "Application",
+  "Login": "Login",
+  "Logout": "Logout",
+  "Welcome": "Tsheen",
+  "SignedInAs": "Signed in as {{name}}",
+  "Note": "Note",
+  "SaveNote": "Save note",
+  "NoteRequired": "Enter a note."
+}

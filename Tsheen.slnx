@@ -1,0 +1,23 @@
+<Solution>
+    <Configurations>
+        <Platform Name="Any CPU" />
+    </Configurations>
+    <Folder Name="/src/">
+        <Project Path="src/Tsheen.Domain/Tsheen.Domain.csproj" />
+        <Project Path="src/Tsheen.Application/Tsheen.Application.csproj" />
+        <Project Path="src/Tsheen.EntityFrameworkCore/Tsheen.EntityFrameworkCore.csproj" />
+        <Project Path="src/Tsheen.Domain.Shared/Tsheen.Domain.Shared.csproj" />
+        <Project Path="src/Tsheen.Application.Contracts/Tsheen.Application.Contracts.csproj" />
+        <Project Path="src/Tsheen.HttpApi/Tsheen.HttpApi.csproj" />
+        <Project Path="src/Tsheen.HttpApi.Client/Tsheen.HttpApi.Client.csproj" />
+        <Project Path="src/Tsheen.HttpApi.Host/Tsheen.HttpApi.Host.csproj" />
+        <Project Path="src/Tsheen.DbMigrator/Tsheen.DbMigrator.csproj" />
+    </Folder>
+    <Folder Name="/test/">
+        <Project Path="test/Tsheen.Application.Tests/Tsheen.Application.Tests.csproj" />
+        <Project Path="test/Tsheen.EntityFrameworkCore.Tests/Tsheen.EntityFrameworkCore.Tests.csproj" />
+        <Project Path="test/Tsheen.TestBase/Tsheen.TestBase.csproj" />
+        <Project Path="test/Tsheen.Domain.Tests/Tsheen.Domain.Tests.csproj" />
+        <Project Path="test/Tsheen.HttpApi.Client.ConsoleTestApp/Tsheen.HttpApi.Client.ConsoleTestApp.csproj" />
+    </Folder>
+</Solution>

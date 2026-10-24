@@ -1,0 +1,109 @@
+{
+  "template": "app",
+  "imports": {
+    "Volo.Abp.LeptonXLiteTheme": {
+      "version": "5.7.0",
+      "isInstalled": true,
+      "creationTime": "10/24/2026 10:28:31 +00:00"
+    },
+    "Volo.Abp.Account": {
+      "version": "10.7.0",
+      "isInstalled": true,
+      "creationTime": "10/24/2026 10:28:31 +00:00"
+    },
+    "Volo.Abp.OpenIddict": {
+      "version": "10.7.0",
+      "isInstalled": true,
+      "creationTime": "10/24/2026 10:28:31 +00:00"
+    },
+    "Volo.Abp.Identity": {
+      "version": "10.7.0",
+      "isInstalled": true,
+      "creationTime": "10/24/2026 10:28:31 +00:00"
+    },
+    "Volo.Abp.SettingManagement": {
+      "version": "10.7.0",
+      "isInstalled": true,
+      "creationTime": "10/24/2026 10:28:31 +00:00"
+    },
+    "Volo.Abp.PermissionManagement": {
+      "version": "10.7.0",
+      "isInstalled": true,
+      "creationTime": "10/24/2026 10:28:31 +00:00"
+    },
+    "Volo.Abp.FeatureManagement": {
+      "version": "10.7.0",
+      "isInstalled": true,
+      "creationTime": "10/24/2026 10:28:31 +00:00"
+    },
+    "Volo.Abp.BlobStoring.Database": {
+      "version": "10.7.0",
+      "isInstalled": true,
+      "creationTime": "10/24/2026 10:28:31 +00:00"
+    }
+  },
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "Tsheen.Application": {
+      "path": "src/Tsheen.Application/Tsheen.Application.abppkg",
+      "folder": "src"
+    },
+    "Tsheen.Application.Tests": {
+      "path": "test/Tsheen.Application.Tests/Tsheen.Application.Tests.abppkg",
+      "folder": "test"
+    },
+    "Tsheen.Domain.Shared": {
+      "path": "src/Tsheen.Domain.Shared/Tsheen.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "Tsheen.Application.Contracts": {
+      "path": "src/Tsheen.Application.Contracts/Tsheen.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "Tsheen.HttpApi": {
+      "path": "src/Tsheen.HttpApi/Tsheen.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "Tsheen.HttpApi.Client": {
+      "path": "src/Tsheen.HttpApi.Client/Tsheen.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "Tsheen.EntityFrameworkCore.Tests": {
+      "path": "test/Tsheen.EntityFrameworkCore.Tests/Tsheen.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "Tsheen.EntityFrameworkCore": {
+      "path": "src/Tsheen.EntityFrameworkCore/Tsheen.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "Tsheen.TestBase": {
+      "path": "test/Tsheen.TestBase/Tsheen.TestBase.abppkg",
+      "folder": "test"
+    },
+    "Tsheen.Domain.Tests": {
+      "path": "test/Tsheen.Domain.Tests/Tsheen.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "Tsheen.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/Tsheen.HttpApi.Client.ConsoleTestApp/Tsheen.HttpApi.Client.ConsoleTestApp.abppkg",
+      "folder": "test"
+    },
+    "Tsheen.DbMigrator": {
+      "path": "src/Tsheen.DbMigrator/Tsheen.DbMigrator.abppkg",
+      "folder": "src"
+    },
+    "Tsheen.HttpApi.Host": {
+      "path": "src/Tsheen.HttpApi.Host/Tsheen.HttpApi.Host.abppkg",
+      "folder": "src"
+    },
+    "Tsheen.Domain": {
+      "path": "src/Tsheen.Domain/Tsheen.Domain.abppkg",
+      "folder": "src"
+    }
+  }
+}

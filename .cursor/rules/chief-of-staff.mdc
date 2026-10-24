@@ -1,0 +1,15 @@
+---
+description: Project /chief — multi-agent feature orchestration
+alwaysApply: false
+---
+
+# Chief of Staff
+
+`tsheen` = workspace root directory name (kebab-case).
+
+When the user runs `/chief` or asks for multi-agent feature orchestration:
+
+1. Follow `.cursor/skills/tsheen-chief-of-staff/SKILL.md` (or `/c/Users/fatem/.cursor/skills/chief-of-staff/SKILL.md` when the project skill is missing).
+2. **"Dispatch" = launch a Task subagent** per `/c/Users/fatem/.cursor/skills/chief-of-staff/templates/dispatch-protocol.md`. The chief thread never edits application source or skips a required stage.
+3. Require Graphify before codebase exploration.
+4. Do not use personal chief (`~/chief-of-staff/SOUL.md`).

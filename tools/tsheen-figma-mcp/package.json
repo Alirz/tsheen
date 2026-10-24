@@ -1,0 +1,14 @@
+{
+  "name": "tsheen-figma-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Read-only stdio MCP that serves the Tsheen UI standard decoded from figma/tsheen.fig.",
+  "scripts": {
+    "start": "node server.mjs",
+    "check": "node check.mjs"
+  },
+  "dependencies": {
+    "kiwi-schema": "0.5.0"
+  }
+}
