@@ -4,6 +4,19 @@
     "AppName": "Tsheen",
     "Menu:Home": "Home",
     "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information visit",
-    "Welcome": "Welcome"
+    "Welcome": "Welcome",
+    "Login:Title": "Enter Tsheen",
+    "Login:HeroTitle": "Welcome to Tsheen.",
+    "Login:HeroSubtitle": "Tsheen; a safe and profitable saving",
+    "Login:TabLogin": "Login",
+    "Login:TabSignup": "Sign up",
+    "Login:Greeting": "Hello",
+    "Login:Instructions": "To enter your Tsheen panel, enter your username (national ID) and password.",
+    "Login:UserNameOrEmailAddress": "Username (national ID)",
+    "Login:Password": "Password",
+    "Login:Forgot": "Forgot your password?",
+    "Login:OtpQuestion": "Do you have a two-factor code?",
+    "Login:OtpHelp": "Enter the two-factor code from your authenticator app (for example Google Authenticator).",
+    "Login:Submit": "Enter Tsheen"
   }
 }

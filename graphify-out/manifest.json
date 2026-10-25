@@ -162,9 +162,9 @@
     "semantic_hash": ""
   },
   "apps/react/tsconfig.app.json": {
-    "mtime": 1792838862.7230544,
-    "seen": 1792839434.5942388,
-    "ast_hash": "e5e297144d7c7bdc53a072e274312a2e",
+    "mtime": 1792910857.755435,
+    "seen": 1792913840.2451158,
+    "ast_hash": "741f275c4e6630e491685eec75bb5cad",
     "semantic_hash": ""
   },
   "apps/react/tsconfig.json": {
@@ -330,9 +330,9 @@
     "semantic_hash": ""
   },
   "src/Tsheen.Domain.Shared/Localization/Tsheen/en.json": {
-    "mtime": 1792837723.7436771,
-    "seen": 1792839434.5943103,
-    "ast_hash": "4720bb9752a2aa434e7785fc5c24d05d",
+    "mtime": 1792918397.057139,
+    "seen": 1792918547.56072,
+    "ast_hash": "160560ea08f7f9169c84b49b61a15165",
     "semantic_hash": ""
   },
   "src/Tsheen.Domain.Shared/Localization/Tsheen/es.json": {
@@ -450,9 +450,9 @@
     "semantic_hash": ""
   },
   "src/Tsheen.Domain.Shared/TsheenDomainSharedModule.cs": {
-    "mtime": 1792837723.7090466,
-    "seen": 1792839434.5943565,
-    "ast_hash": "6041d0734cae9cc017e0d12f23c1aa45",
+    "mtime": 1792913616.3686926,
+    "seen": 1792913840.245229,
+    "ast_hash": "9eb11d35b246416cf24ab1c7e3b4b26c",
     "semantic_hash": ""
   },
   "src/Tsheen.Domain.Shared/TsheenGlobalFeatureConfigurator.cs": {
@@ -1248,9 +1248,9 @@
     "semantic_hash": ""
   },
   "src/Tsheen.AuthServer/TsheenAuthServerModule.cs": {
-    "mtime": 1792854653.687861,
-    "seen": 1792854873.5175583,
-    "ast_hash": "b73378ff3a9ea092430f948fd53cf25e",
+    "mtime": 1792913639.6356878,
+    "seen": 1792913840.2451618,
+    "ast_hash": "cf3f93418a22a9cade4fb3f6e21eaecc",
     "semantic_hash": ""
   },
   "src/Tsheen.AuthServer/TsheenBrandingProvider.cs": {
@@ -1281,12 +1281,6 @@
     "mtime": 1792837723.7160537,
     "seen": 1792854873.5175695,
     "ast_hash": "568596ed07d515f98f1795b6f13ae18e",
-    "semantic_hash": ""
-  },
-  "src/Tsheen.AuthServer/wwwroot/dev-login-helper.js": {
-    "mtime": 1792837723.7346354,
-    "seen": 1792854873.5175712,
-    "ast_hash": "85a40480425de57284022c77f6ef661f",
     "semantic_hash": ""
   },
   "src/Tsheen.AuthServer/wwwroot/global-scripts.js": {
@@ -1365,6 +1359,42 @@
     "mtime": 1792856364.1712525,
     "seen": 1792859138.4025457,
     "ast_hash": "8344d89ae1224b20b67a9f02c9839362",
+    "semantic_hash": ""
+  },
+  "src/Tsheen.AuthServer/Pages/Account/Login.cshtml": {
+    "mtime": 1792920182.1783662,
+    "seen": 1792920337.3084497,
+    "ast_hash": "59389b79dd684682516ca4cba91abccd",
+    "semantic_hash": ""
+  },
+  "src/Tsheen.Domain.Shared/Localization/Tsheen/fa.json": {
+    "mtime": 1792918395.0142014,
+    "seen": 1792918547.5607285,
+    "ast_hash": "e1654a871a20ac5bca72ca813ff1f4a8",
+    "semantic_hash": ""
+  },
+  "test/Tsheen.HttpApi.Host.Tests/AuthServerLoginCultureTests.cs": {
+    "mtime": 1792920498.301609,
+    "seen": 1792920611.9086158,
+    "ast_hash": "1ec4283421c330977e4095696632cbe1",
+    "semantic_hash": ""
+  },
+  "figma/tsheen.pdf": {
+    "mtime": 1788773302.27975,
+    "seen": 1792918547.5610619,
+    "ast_hash": "86b5b000bc318a8b473fa19fda2ab2bd",
+    "semantic_hash": ""
+  },
+  "src/Tsheen.AuthServer/wwwroot/images/login-gold-bars.jpeg": {
+    "mtime": 1792917888.9850488,
+    "seen": 1792918547.5611196,
+    "ast_hash": "07a21bffa0c5085529f9211b884773cf",
+    "semantic_hash": ""
+  },
+  "src/Tsheen.AuthServer/wwwroot/images/login-logo.png": {
+    "mtime": 1792918250.8476696,
+    "seen": 1792918547.5611217,
+    "ast_hash": "205ee45cf1497c6e8ddcd963f6e25e63",
     "semantic_hash": ""
   }
 }

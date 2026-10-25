@@ -1,0 +1,18 @@
+{
+  "Culture": "fa",
+  "Texts": {
+    "Login:Title": "ورود به تیشین",
+    "Login:HeroTitle": "به تیشین خوش آمدید.",
+    "Login:HeroSubtitle": "تیشین ؛ پس انداز امن و پر سود",
+    "Login:TabLogin": "ورود",
+    "Login:TabSignup": "ثبت نام",
+    "Login:Greeting": "با سلام",
+    "Login:Instructions": "جهت ورود به پنل تیشین خود ؛ نام کاربری( کدملی) و رمز ورود خود را وارد نمایید.",
+    "Login:UserNameOrEmailAddress": "نام کاربری (کدملی)",
+    "Login:Password": "رمز ورود",
+    "Login:Forgot": "رمز ورود خود را فراموش کرده اید؟",
+    "Login:OtpQuestion": "کد شناسه دوعاملی دارید؟",
+    "Login:OtpHelp": "لطفا از نرم افزار ورود دوعاملی خود ( مثلا google authenticator ) رمز شناسایی دوعاملی را وارد کنید.",
+    "Login:Submit": "ورود به تیشین"
+  }
+}

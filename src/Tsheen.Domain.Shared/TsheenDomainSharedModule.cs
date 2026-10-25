@@ -49,7 +49,8 @@ public class TsheenDomainSharedModule : AbpModule
 
             options.DefaultResourceType = typeof(TsheenResource);
             
-            options.Languages.Add(new LanguageInfo("en", "en", "English")); 
+            options.Languages.Add(new LanguageInfo("en", "en", "English"));
+            options.Languages.Add(new LanguageInfo("fa", "fa", "فارسی"));
             options.Languages.Add(new LanguageInfo("ar", "ar", "Arabic")); 
             options.Languages.Add(new LanguageInfo("zh-Hans", "zh-Hans", "Chinese (Simplified)")); 
             options.Languages.Add(new LanguageInfo("zh-Hant", "zh-Hant", "Chinese (Traditional)")); 

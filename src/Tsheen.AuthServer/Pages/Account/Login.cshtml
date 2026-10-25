@@ -1,0 +1,410 @@
+@page
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+@using Tsheen.Localization
+@using Volo.Abp.Account.Web.Pages.Account
+@using Volo.Abp.Identity
+@model LoginModel
+@inject IHtmlLocalizer<TsheenResource> L
+@{
+    Layout = null;
+    var lang = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "en" ? "en" : "fa";
+}
+<!DOCTYPE html>
+<html lang="@lang" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@L["Login:HeroTitle"]</title>
+</head>
+<body>
+    <style>
+        @@font-face {
+            font-family: "Vazirmatn FD";
+            src: url("/fonts/Vazirmatn-FD-Regular.woff2") format("woff2");
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @@font-face {
+            font-family: "Vazirmatn FD";
+            src: url("/fonts/Vazirmatn-FD-Bold.woff2") format("woff2");
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+            background: #c6924a;
+            color: #303030;
+            font-family: "Vazirmatn FD", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        button,
+        input {
+            font-family: "Vazirmatn FD", sans-serif;
+        }
+
+        .shell {
+            direction: ltr;
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            container-type: size;
+        }
+
+        .board {
+            direction: rtl;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 1440px;
+            height: 1024px;
+            overflow: hidden;
+            border-radius: 28px;
+            background: #f2d48b;
+            transform: translate(-50%, -50%) scale(min(100cqw / 1440px, 100cqh / 1024px));
+            transform-origin: center center;
+        }
+
+        .hero-photo {
+            position: absolute;
+            left: 0;
+            top: -3px;
+            width: 686.5px;
+            height: 1030px;
+            object-fit: fill;
+            z-index: 1;
+        }
+
+        .hero-copy {
+            position: absolute;
+            left: 0;
+            top: 150px;
+            width: 686.5px;
+            z-index: 2;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .hero-title {
+            margin: 0;
+            color: #ffffff;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 40px;
+        }
+
+        .hero-sub {
+            margin: 18px 0 0;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        .panel {
+            position: absolute;
+            left: 686.5px;
+            top: 0;
+            width: 753.5px;
+            height: 1024px;
+            background: linear-gradient(180deg, #f2d48b 0%, #eac880 20%, #dcb26d 50%, #c6924a 88%, #c38d41 100%);
+        }
+
+        .logo {
+            position: absolute;
+            left: 833.3px;
+            top: 6.3px;
+            width: 459.4px;
+            height: 197.4px;
+            object-fit: contain;
+            z-index: 2;
+        }
+
+        .card {
+            position: absolute;
+            left: 785px;
+            top: 252px;
+            width: 520px;
+            height: 664px;
+            background: #ffffff;
+            border-radius: 28px;
+            z-index: 2;
+        }
+
+        .pill {
+            position: absolute;
+            left: 942px;
+            top: 296px;
+            width: 207px;
+            height: 40px;
+            display: flex;
+            flex-direction: row;
+            direction: ltr;
+            align-items: stretch;
+            background: #ffffff;
+            border: 1px solid #d9d9d9;
+            border-radius: 20px;
+            z-index: 3;
+        }
+
+        .seg-on,
+        .seg-off {
+            display: flex;
+            direction: ltr;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .seg-on {
+            order: 1;
+            flex: 0 0 104px;
+            margin: -1px;
+            gap: 6px;
+            background: #eac880;
+            color: #303030;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        .seg-off {
+            order: 2;
+            flex: 1 1 auto;
+            background: #ffffff;
+            color: #b3b3b3;
+            border-radius: 0 20px 20px 0;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16px;
+        }
+
+        .check {
+            display: block;
+            width: 12px;
+            height: 9px;
+            flex: 0 0 auto;
+        }
+
+        .greeting,
+        .forgot,
+        .otp-question,
+        .otp-help {
+            position: absolute;
+            left: 809px;
+            width: 471px;
+            margin: 0;
+            text-align: right;
+            z-index: 3;
+        }
+
+        .greeting {
+            top: 377px;
+            color: #303030;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+        }
+
+        .greeting-line {
+            display: block;
+        }
+
+        .forgot {
+            top: 607px;
+            color: #0077ff;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16px;
+        }
+
+        .otp-question {
+            top: 659px;
+            color: #303030;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16px;
+        }
+
+        .otp-help {
+            top: 691px;
+            color: #757575;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16px;
+        }
+
+        .login-form {
+            margin: 0;
+        }
+
+        .field {
+            position: absolute;
+            left: 809px;
+            width: 471px;
+            height: 56px;
+            margin: 0;
+            padding: 0 16px;
+            background: #f5f5f5;
+            color: #303030;
+            border: 1px solid #d9d9d9;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 56px;
+            text-align: center;
+            outline: none;
+            z-index: 3;
+        }
+
+        .field::placeholder {
+            color: #b3b3b3;
+            opacity: 1;
+            text-align: center;
+        }
+
+        .field-user {
+            top: 452px;
+        }
+
+        .field-pass {
+            top: 532px;
+        }
+
+        .field-pass::-ms-reveal,
+        .field-pass::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        .field-error {
+            position: absolute;
+            left: 809px;
+            width: 471px;
+            color: #ec221f;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16px;
+            text-align: right;
+            z-index: 3;
+        }
+
+        .field-error-user {
+            top: 508px;
+        }
+
+        .field-error-pass {
+            top: 588px;
+        }
+
+        .field-validation-valid {
+            display: none;
+        }
+
+        .otp-row {
+            position: absolute;
+            left: 809px;
+            top: 732px;
+            width: 472px;
+            height: 56px;
+            display: flex;
+            flex-direction: row;
+            direction: ltr;
+            justify-content: space-between;
+            z-index: 3;
+        }
+
+        .otp {
+            display: block;
+            width: 57px;
+            height: 56px;
+            background: #f5f5f5;
+            border: 1px solid #d9d9d9;
+            border-radius: 8px;
+        }
+
+        .submit {
+            position: absolute;
+            left: 809px;
+            top: 820px;
+            width: 472px;
+            height: 56px;
+            margin: 0;
+            padding: 0 16px;
+            background: #cc8627;
+            color: #f5f5f5;
+            border: 0;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 20px;
+            text-align: center;
+            cursor: pointer;
+            z-index: 3;
+        }
+    </style>
+    <main class="shell">
+        <div class="board">
+            <img class="hero-photo" src="/images/login-gold-bars.jpeg" alt="" />
+            <div class="hero-copy">
+                <h1 class="hero-title">@L["Login:HeroTitle"]</h1>
+                <p class="hero-sub">@L["Login:HeroSubtitle"]</p>
+            </div>
+            <div class="panel"></div>
+            <img class="logo" src="/images/login-logo.png" alt="TSHEEN" />
+            <div class="card"></div>
+            <div class="pill">
+                <span class="seg-on">
+                    <svg class="check" viewBox="0 0 12 9" aria-hidden="true" focusable="false">
+                        <path d="M1.2 4.4 4.3 7.4 10.8 1.2" fill="none" stroke="#945511" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>@L["Login:TabLogin"]</span>
+                </span>
+                <span class="seg-off">@L["Login:TabSignup"]</span>
+            </div>
+            <p class="greeting">
+                <span class="greeting-line">@L["Login:Greeting"]</span>
+                <span class="greeting-line">@L["Login:Instructions"]</span>
+            </p>
+            <p class="forgot">@L["Login:Forgot"]</p>
+            <p class="otp-question">@L["Login:OtpQuestion"]</p>
+            <p class="otp-help">@L["Login:OtpHelp"]</p>
+            <div class="otp-row" aria-hidden="true">
+                <span class="otp"></span>
+                <span class="otp"></span>
+                <span class="otp"></span>
+                <span class="otp"></span>
+                <span class="otp"></span>
+                <span class="otp"></span>
+            </div>
+            @if (Model.EnableLocalLogin)
+            {
+                <form method="post" class="login-form">
+                    <input type="hidden" asp-for="ReturnUrl" />
+                    <input type="hidden" asp-for="ReturnUrlHash" />
+                    <input class="field field-user" asp-for="LoginInput.UserNameOrEmailAddress" autocomplete="username" placeholder="@L["Login:UserNameOrEmailAddress"]" />
+                    <span class="field-error field-error-user"><span asp-validation-for="LoginInput.UserNameOrEmailAddress"></span></span>
+                    <input class="field field-pass" type="password" autocomplete="current-password" maxlength="@IdentityUserConsts.MaxPasswordLength" asp-for="LoginInput.Password" placeholder="@L["Login:Password"]" />
+                    <span class="field-error field-error-pass"><span asp-validation-for="LoginInput.Password"></span></span>
+                    <button class="submit" type="submit" name="Action" value="Login">@L["Login:Submit"]</button>
+                </form>
+            }
+        </div>
+    </main>
+</body>
+</html>

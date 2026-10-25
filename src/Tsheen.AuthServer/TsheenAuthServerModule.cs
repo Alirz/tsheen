@@ -1,9 +1,12 @@
 using System;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.HttpOverrides;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.RequestLocalization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -115,8 +118,28 @@ public class TsheenAuthServerModule : AbpModule
         ConfigureAuthentication(context);
         ConfigureUrls(configuration);
         ConfigureBundles();
+        ConfigureRequestLocalization();
         ConfigureVirtualFileSystem(context);
         ConfigureCors(context, configuration);
+    }
+
+    private void ConfigureRequestLocalization()
+    {
+        Configure<AbpRequestLocalizationOptions>(options =>
+        {
+            options.RequestLocalizationOptionConfigurators.Add((_, localizationOptions) =>
+            {
+                localizationOptions.DefaultRequestCulture = new RequestCulture("fa", "fa");
+                foreach (var provider in localizationOptions.RequestCultureProviders
+                             .OfType<AcceptLanguageHeaderRequestCultureProvider>()
+                             .ToList())
+                {
+                    localizationOptions.RequestCultureProviders.Remove(provider);
+                }
+
+                return Task.CompletedTask;
+            });
+        });
     }
 
     private void ConfigureStudio(IHostEnvironment hostingEnvironment)
