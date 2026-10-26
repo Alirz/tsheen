@@ -286,6 +286,9 @@ tempkey.jwk
 # Local Docker TLS material. Generated on the machine; do not commit.
 .docker/certs/
 
+# Design source PDF. Larger than GitHub's 100 MB file limit.
+figma/tsheen.pdf
+
 # Chief of staff run state and ephemeral test-agent artifacts
 .cursor/state/tasks/active-task.md
 .cursor/state/tasks/archive/
