@@ -1,5 +1,6 @@
 extern alias AuthServer;
 
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AuthServerProgram = AuthServer::Tsheen.Program;
@@ -30,6 +31,12 @@ public sealed class TsheenAuthServerHostFactory : WebApplicationFactory<AuthServ
     public const string Audience = "Tsheen";
 
     private readonly AbpUnitTestSqliteDatabase _database;
+
+    static TsheenAuthServerHostFactory()
+    {
+        // CreateBuilder reads the environment before UseSetting is visible to PreConfigure.
+        Environment.SetEnvironmentVariable("AuthServer__UseEphemeralEncryptionAndSigningKeys", "true");
+    }
 
     public TsheenAuthServerHostFactory(AbpUnitTestSqliteDatabase database)
     {

@@ -154,7 +154,8 @@ public sealed class TsheenLocalJwtHostFactory : IAsyncDisposable
         var body = await response.Content.ReadAsStringAsync();
         if (!response.IsSuccessStatusCode)
         {
-            throw new InvalidOperationException("AuthServer JWKS request failed with status " + (int)response.StatusCode + ".");
+            throw new InvalidOperationException(
+                "AuthServer JWKS request failed with status " + (int)response.StatusCode + ". " + DescribeJwksBody(body));
         }
 
         var keys = new JsonWebKeySet(body).GetSigningKeys();
@@ -164,6 +165,20 @@ public sealed class TsheenLocalJwtHostFactory : IAsyncDisposable
         }
 
         return keys;
+    }
+
+    private static string DescribeJwksBody(string body)
+    {
+        if (string.IsNullOrWhiteSpace(body)
+            || body.Contains("CertificatePassPhrase", StringComparison.OrdinalIgnoreCase)
+            || body.Contains("Password", StringComparison.OrdinalIgnoreCase)
+            || body.Contains("ConnectionString", StringComparison.OrdinalIgnoreCase))
+        {
+            return "Response body omitted.";
+        }
+
+        var text = body.Replace("\r", " ").Replace("\n", " ").Trim();
+        return text.Length <= 300 ? text : text.Substring(0, 300);
     }
 
     public HttpClient CreateClient()

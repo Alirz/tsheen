@@ -1,17 +1,17 @@
 # Graph Report - tsheen  (2026-10-26)
 
 ## Corpus Check
-- 206 files · ~41,351 words
+- 206 files · ~41,451 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 62 file(s) not represented in the graph (top: .mdc 15, .abppkg 14, (none) 11)
 
 ## Summary
-- 1279 nodes · 2203 edges · 94 communities (59 shown, 35 thin omitted)
+- 1280 nodes · 2206 edges · 95 communities (61 shown, 34 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 14 edges (avg confidence: 0.84)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `951ad24c`
+- Built from commit: `b359d1b0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -20,7 +20,7 @@
 - TsheenAuthServerModule
 - react/package.json
 - system
-- TsheenAuthServerHostFactory
+- Index.cshtml
 - TsheenDomainModule.cs
 - check.mjs
 - TsheenHttpApiHostModule.cs
@@ -46,26 +46,26 @@
 - Tsheen.Domain.csproj
 - Test Agent (Verification Stage)
 - Tsheen
-- system
+- TsheenDbMigrationService.cs
 - Tsheen.Domain.Shared.csproj
-- Initial
 - TsheenLocalJwtHostFactory.cs
 - Fact
+- IServiceCollection
 - DbMigratorHostedService
-- TsheenEntityFrameworkCoreModule.cs
+- system
 - TsheenDbContext
 - About this solution
 - Tsheen UI standard
 - TsheenTestBase
-- xunit
+- Tsheen
 - .AuthServer_serves_account_login_and_issues_three_segment_jwt_for_audience_Tsheen
 - Tsheen.AuthServer/package.json
 - axios.ts
-- TsheenSsoHostFixture
+- .StartAsync
 - Tsheen.HttpApi.csproj
 - design.mjs
-- Task
-- Index.cshtml
+- ITsheenDbSchemaMigrator
+- IndexModel
 - Shared Task Memory (`tsheen`)
 - ITransientDependency
 - Manager Agent
@@ -77,8 +77,8 @@
 - Backend Agent
 - Frontend Agent
 - tools.mjs
-- TsheenLocalJwtHostFactory
-- TsheenEntityFrameworkCoreTestModule
+- Login.cshtml
+- Index.cshtml.cs
 - tsheen-figma-mcp/package.json
 - Code Review Agent
 - Security Agent
@@ -93,11 +93,11 @@
 - limits.mjs
 - TsheenTestBaseModule
 - tsheen-figma
-- TsheenConsoleApiClientModule
-- TsheenDbContextFactory
+- ClientDemoService
 - Tsheen.HttpApi.Host.Tests.csproj
 - FakeCurrentPrincipalAccessor
 - nginx-entrypoint.sh
+- TsheenPermissionDefinitionProvider
 - TsheenDbMigrationService
 - scrub-appsettings.py
 - AuthServerLoginCultureTests
@@ -129,7 +129,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (94 total, 35 thin omitted)
+## Communities (95 total, 34 thin omitted)
 
 ### Community 0 - "cn"
 Cohesion: 0.06
@@ -139,9 +139,13 @@ Nodes (26): Captcha(), GoldBar1(), GoldBar3(), GoldBar5(), IconButton(), InputIc
 Cohesion: 0.09
 Nodes (29): devDependencies, jsdom@^27.0.1, tailwindcss@^4.3.3, @tailwindcss/vite@^4.3.3, @testing-library/react@^16.3.0, @types/node@^26.6.5, @types/react@^19.2.2, @types/react-dom@^19.2.2 (+21 more)
 
+### Community 4 - "Index.cshtml"
+Cohesion: 0.15
+Nodes (9): AccountResource, IndexModel, Microsoft.AspNetCore.Http.Extensions, Microsoft.AspNetCore.Mvc.Localization, TsheenResource, Volo.Abp.Account.Localization, Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.Branding, Volo.Abp.AspNetCore.Mvc.UI.Theming (+1 more)
+
 ### Community 5 - "TsheenDomainModule.cs"
-Cohesion: 0.13
-Nodes (5): Tsheen.Localization, Tsheen.Permissions, TsheenPermissions, TsheenAppService, Volo.Abp.Ui.Branding
+Cohesion: 0.18
+Nodes (4): Tsheen.Localization, Tsheen.Permissions, TsheenPermissions, TsheenAppService
 
 ### Community 6 - "check.mjs"
 Cohesion: 0.09
@@ -169,7 +173,7 @@ Nodes (20): Clarifications resolved, Closeout, Decision log, Handoffs, Immutable
 
 ### Community 14 - "TsheenDomainSharedModule"
 Cohesion: 0.13
-Nodes (7): TsheenApplicationContractsModule, TsheenDtoExtensions, TsheenDomainSharedModule, TsheenGlobalFeatureConfigurator, TsheenModuleExtensionConfigurator, TsheenEfCoreEntityExtensionMappings, TsheenEntityFrameworkCoreModule
+Nodes (5): TsheenDtoExtensions, TsheenGlobalFeatureConfigurator, TsheenModuleExtensionConfigurator, TsheenEfCoreEntityExtensionMappings, TsheenEntityFrameworkCoreModule
 
 ### Community 15 - "router.tsx"
 Cohesion: 0.16
@@ -188,8 +192,8 @@ Cohesion: 0.11
 Nodes (17): Escalation filter, Graphify preflight, Orchestration, Project Chief of Staff (`tsheen`), Recording handoffs, Repository, Retry and escalation, Run state (chief only) (+9 more)
 
 ### Community 19 - "AbpModule"
-Cohesion: 0.18
-Nodes (5): TsheenApplicationModule, TsheenDomainModule, TsheenHttpApiClientModule, TsheenApplicationTestModule, TsheenDomainTestModule
+Cohesion: 0.15
+Nodes (5): TsheenApplicationContractsModule, TsheenApplicationModule, TsheenDomainModule, TsheenHttpApiClientModule, TsheenConsoleApiClientModule
 
 ### Community 20 - "HomePage.tsx"
 Cohesion: 0.14
@@ -228,28 +232,24 @@ Cohesion: 0.15
 Nodes (12): Allowed extension languages, Global skills (do not copy into the project), Standards, Step 0 — Load task context, Step 1 — Requirement checklist (before editing any file), Step 2 — Choose the strategy, Step 7 gate — pre-completion (mandatory), Step 9 — Return the verification handoff (+4 more)
 
 ### Community 29 - "Tsheen"
-Cohesion: 0.09
-Nodes (5): Tsheen, TsheenDomainErrorCodes, TsheenConsts, TsheenTestConsts, Volo.Abp.Identity
-
-### Community 30 - "system"
-Cohesion: 0.10
-Nodes (5): Tsheen.OpenIddict, Tsheen.HttpApi.Host.Tests, Tsheen.HttpApi.Client.ConsoleTestApp, Tsheen.Data, Tsheen.HealthChecks
+Cohesion: 0.08
+Nodes (3): Tsheen.HttpApi.Client.ConsoleTestApp, TsheenApplicationTestModule, TsheenDomainTestModule
 
 ### Community 31 - "Tsheen.Domain.Shared.csproj"
 Cohesion: 0.15
 Nodes (12): Microsoft.Extensions.FileProviders.Embedded (10.0.11), Volo.Abp.AuditLogging.Domain.Shared (10.7.0), Volo.Abp.BackgroundJobs.Domain.Shared (10.7.0), Volo.Abp.BlobStoring.Database.Domain.Shared (10.7.0), Volo.Abp.FeatureManagement.Domain.Shared (10.7.0), Volo.Abp.GlobalFeatures (10.7.0), Volo.Abp.Identity.Domain.Shared (10.7.0), Volo.Abp.OpenIddict.Domain.Shared (10.7.0) (+4 more)
 
-### Community 32 - "Initial"
-Cohesion: 0.13
-Nodes (6): Tsheen.Models.Test, Initial, TsheenDbContextModelSnapshot, TestModel, BirthDate, Name
-
 ### Community 36 - "DbMigratorHostedService"
-Cohesion: 0.09
-Nodes (5): DbMigratorHostedService, Program, TsheenDbMigratorModule, HealthChecksBuilderExtensions, TsheenDatabaseCheck
+Cohesion: 0.13
+Nodes (4): DbMigratorHostedService, Program, TsheenDbMigratorModule, TsheenDatabaseCheck
+
+### Community 37 - "system"
+Cohesion: 0.12
+Nodes (7): Tsheen.Migrations, Tsheen.EntityFrameworkCore, Initial, TsheenEntityFrameworkCoreCollection, TsheenEntityFrameworkCoreCollectionFixtureBase, TsheenEntityFrameworkCoreFixture, TsheenSsoHostCollection
 
 ### Community 38 - "TsheenDbContext"
-Cohesion: 0.11
-Nodes (9): TsheenDbContext, ClaimTypes, LinkUsers, OrganizationUnits, Roles, SecurityLogs, Sessions, UserDelegations (+1 more)
+Cohesion: 0.05
+Nodes (17): Tsheen.Models.Test, TsheenDbContext, ClaimTypes, LinkUsers, OrganizationUnits, Roles, SecurityLogs, Sessions (+9 more)
 
 ### Community 39 - "About this solution"
 Cohesion: 0.18
@@ -259,13 +259,9 @@ Nodes (10): About this solution, Additional resources, Before running the applic
 Cohesion: 0.25
 Nodes (7): Canvases and sections, Checked values, Components, Fill styles, Tokens, Tsheen UI standard, Typography
 
-### Community 41 - "TsheenTestBase"
-Cohesion: 0.16
-Nodes (3): SampleRepositoryTests, TsheenEntityFrameworkCoreTestBase, TsheenTestBase
-
-### Community 42 - "xunit"
-Cohesion: 0.08
-Nodes (14): Tsheen.EntityFrameworkCore.Applications, Tsheen.EntityFrameworkCore.Samples, Tsheen.EntityFrameworkCore.Domains, Tsheen.Samples, SampleAppServiceTests, TsheenApplicationTestBase, SampleDomainTests, TsheenDomainTestBase (+6 more)
+### Community 42 - "Tsheen"
+Cohesion: 0.12
+Nodes (9): Tsheen.EntityFrameworkCore.Samples, Tsheen.EntityFrameworkCore.Domains, Tsheen.HttpApi.Host.Tests, Tsheen.Samples, Tsheen, TsheenDomainErrorCodes, TsheenConsts, TsheenTestConsts (+1 more)
 
 ### Community 44 - "Tsheen.AuthServer/package.json"
 Cohesion: 0.25
@@ -275,9 +271,9 @@ Nodes (8): @abp/aspnetcore.mvc.ui.theme.leptonxlite, dependencies, @abp/aspnetco
 Cohesion: 0.19
 Nodes (10): axios@^1.13.2, ApplicationConfigurationDto, configurationApi, CurrentUserDto, api, ensureAccessToken(), RetryConfig, getAccessToken (+2 more)
 
-### Community 46 - "TsheenSsoHostFixture"
-Cohesion: 0.20
-Nodes (3): TsheenSsoHostFixture, Api, AuthServer
+### Community 46 - ".StartAsync"
+Cohesion: 0.06
+Nodes (12): Tsheen.EntityFrameworkCore.Applications, SampleDomainTests, TsheenDomainTestBase, EfCoreSampleAppServiceTests, EfCoreSampleDomainTests, TsheenEntityFrameworkCoreTestModule, TsheenAuthServerHostFactory, TsheenLocalJwtHostFactory (+4 more)
 
 ### Community 47 - "Tsheen.HttpApi.csproj"
 Cohesion: 0.25
@@ -287,13 +283,13 @@ Nodes (7): Volo.Abp.Account.HttpApi (10.7.0), Volo.Abp.FeatureManagement.HttpApi
 Cohesion: 0.23
 Nodes (17): channelByte(), childrenByParent(), cssNamesOf(), designPath, guidOf(), hashToHex(), hexFromColor(), loadDesign() (+9 more)
 
-### Community 49 - "Task"
-Cohesion: 0.17
-Nodes (5): ITsheenDbSchemaMigrator, NullTsheenDbSchemaMigrator, EntityFrameworkCoreTsheenDbSchemaMigrator, Program, ClientDemoService
+### Community 49 - "ITsheenDbSchemaMigrator"
+Cohesion: 0.38
+Nodes (3): ITsheenDbSchemaMigrator, NullTsheenDbSchemaMigrator, EntityFrameworkCoreTsheenDbSchemaMigrator
 
-### Community 50 - "Index.cshtml"
-Cohesion: 0.05
-Nodes (21): AccountResource, Tsheen.Pages, IndexModel, LoginModel, Microsoft.AspNetCore.Http.Extensions, Microsoft.AspNetCore.Mvc.Localization, TsheenResource, Microsoft.AspNetCore.Mvc.Localization (+13 more)
+### Community 50 - "IndexModel"
+Cohesion: 0.14
+Nodes (6): IndexModel, Applications, CurrentLanguage, LanguageProvider, Languages, OpenIdApplicationRepository
 
 ### Community 51 - "Shared Task Memory (`tsheen`)"
 Cohesion: 0.29
@@ -316,8 +312,8 @@ Cohesion: 0.40
 Nodes (5): scripts, build, dev, preview, test
 
 ### Community 58 - "TsheenBrandingProvider"
-Cohesion: 0.15
-Nodes (6): TsheenPermissionDefinitionProvider, TsheenBrandingProvider, AppName, LogoIconUrl, LogoUrl, TsheenResource
+Cohesion: 0.22
+Nodes (5): TsheenBrandingProvider, AppName, LogoIconUrl, LogoUrl, Volo.Abp.Ui.Branding
 
 ### Community 59 - "Backend Agent"
 Cohesion: 0.40
@@ -328,8 +324,12 @@ Cohesion: 0.40
 Nodes (4): Contract, Frontend Agent, Procedure, Repository
 
 ### Community 61 - "tools.mjs"
-Cohesion: 0.22
-Nodes (14): allowedArguments, callTool(), componentNames, design(), matchesName(), nameFilter, readArguments(), rejectPath() (+6 more)
+Cohesion: 0.18
+Nodes (16): COMPONENT_CATALOG, DESIGN_FILE_NAME, allowedArguments, callTool(), componentNames, design(), matchesName(), nameFilter (+8 more)
+
+### Community 62 - "Login.cshtml"
+Cohesion: 0.33
+Nodes (4): LoginModel, Microsoft.AspNetCore.Mvc.Localization, TsheenResource, Volo.Abp.Account.Web.Pages.Account
 
 ### Community 64 - "tsheen-figma-mcp/package.json"
 Cohesion: 0.18
@@ -348,8 +348,12 @@ Cohesion: 0.50
 Nodes (3): Contract, Procedure, Variants Agent
 
 ### Community 68 - "zip.mjs"
-Cohesion: 0.44
-Nodes (8): assertSafeZipName(), isAllowedZipEntry(), findEocd(), inflateMember(), readDesignArchive(), readExact(), readMember(), UNREAD_EXPORT_NAMES
+Cohesion: 0.38
+Nodes (9): assertSafeZipName(), CANVAS_MAX_BYTES, isAllowedZipEntry(), findEocd(), inflateMember(), readDesignArchive(), readExact(), readMember() (+1 more)
+
+### Community 72 - ".ConfigureServices"
+Cohesion: 0.24
+Nodes (3): TsheenResource, TsheenDomainSharedModule, TsheenHttpApiModule
 
 ### Community 77 - "Tsheen.AuthServer.csproj"
 Cohesion: 0.17
@@ -360,8 +364,12 @@ Cohesion: 0.22
 Nodes (6): i18next@^25.6.0, react-i18next@^16.2.4, @testing-library/jest-dom@^6.9.1, i18next, react-i18next, @testing-library/jest-dom
 
 ### Community 81 - "limits.mjs"
-Cohesion: 0.16
-Nodes (16): compileBoundedSchema(), decodeCanvas(), decodeMessage(), decodeSchema(), kiwiBoundedArray(), readChunks(), unreadByteCount(), ZSTD_MAGIC (+8 more)
+Cohesion: 0.21
+Nodes (13): compileBoundedSchema(), decodeCanvas(), decodeMessage(), decodeSchema(), kiwiBoundedArray(), readChunks(), unreadByteCount(), ZSTD_MAGIC (+5 more)
+
+### Community 85 - "ClientDemoService"
+Cohesion: 0.20
+Nodes (4): SampleAppServiceTests, TsheenApplicationTestBase, ClientDemoService, Program
 
 ### Community 87 - "Tsheen.HttpApi.Host.Tests.csproj"
 Cohesion: 0.29
@@ -370,22 +378,22 @@ Nodes (6): Microsoft.AspNetCore.Authentication.JwtBearer (10.0.11), Microsoft.As
 ## Knowledge Gaps
 - **170 isolated node(s):** `node`, `net10.0`, `Volo.Abp.PermissionManagement.Application.Contracts (10.7.0)`, `Volo.Abp.FeatureManagement.Application.Contracts (10.7.0)`, `Volo.Abp.SettingManagement.Application.Contracts (10.7.0)` (+165 more)
   These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 574 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **35 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **34 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Tsheen` connect `Tsheen` to `TsheenLocalJwtHostFactory.cs`, `system`, `TsheenDomainModule.cs`, `TsheenEntityFrameworkCoreModule.cs`, `TsheenHttpApiHostModule.cs`, `TsheenDomainSharedModule`, `system`?**
-  _High betweenness centrality (0.040) - this node is a cross-community bridge._
+- **Why does `Tsheen` connect `Tsheen` to `TsheenLocalJwtHostFactory.cs`, `system`, `TsheenDomainModule.cs`, `system`, `TsheenHttpApiHostModule.cs`, `TsheenDomainSharedModule`, `.StartAsync`, `ClientDemoService`, `TsheenBrandingProvider`, `Tsheen`, `TsheenDbMigrationService.cs`?**
+  _High betweenness centrality (0.045) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `TsheenDbContext` (e.g. with `.ConfigureInMemorySqlite()` and `TsheenSsoHostFixture`) actually correct?**
   _`TsheenDbContext` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `node`, `net10.0`, `Volo.Abp.PermissionManagement.Application.Contracts (10.7.0)` to the rest of the system?**
   _170 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `cn` be split into smaller, more focused modules?**
   _Cohesion score 0.05909090909090909 - nodes in this community are weakly interconnected._
-- **Why does `TsheenDbContext` connect `TsheenDbContext` to `Initial`, `.StartAsync`, `TsheenEntityFrameworkCoreModule.cs`, `TsheenTestBase`, `TsheenSsoHostFixture`, `Task`, `TsheenDbContextFactory`?**
-  _High betweenness centrality (0.021) - this node is a cross-community bridge._
+- **Why does `TsheenDbContext` connect `TsheenDbContext` to `TsheenEntityFrameworkCoreModule.cs`, `ITsheenDbSchemaMigrator`, `.StartAsync`?**
+  _High betweenness centrality (0.022) - this node is a cross-community bridge._
 - **Should `react/package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.08571428571428572 - nodes in this community are weakly interconnected._
-- **Why does `TsheenAuthServerModule` connect `TsheenAuthServerModule` to `system`, `TsheenHttpApiHostModule.cs`, `ServiceConfigurationContext`, `AbpModule`, `TsheenTestBaseModule`, `.PreConfigureServices`?**
-  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+- **Why does `TsheenAuthServerModule` connect `TsheenAuthServerModule` to `TsheenHttpApiHostModule.cs`, `TsheenTestBaseModule`, `AbpModule`, `IHostEnvironment`, `.PreConfigureServices`?**
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._

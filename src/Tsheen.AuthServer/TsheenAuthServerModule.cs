@@ -69,7 +69,14 @@ public class TsheenAuthServerModule : AbpModule
         });
 
         // Absent or false keeps the development certificate, or the production pfx outside Development.
-        if (configuration.GetValue<bool>("AuthServer:UseEphemeralEncryptionAndSigningKeys"))
+        // The environment variable is read directly because the test host sets it before CreateBuilder,
+        // and that value is not always present on IConfiguration during PreConfigureServices.
+        var useEphemeralKeys = configuration.GetValue<bool>("AuthServer:UseEphemeralEncryptionAndSigningKeys")
+            || string.Equals(
+                Environment.GetEnvironmentVariable("AuthServer__UseEphemeralEncryptionAndSigningKeys"),
+                "true",
+                StringComparison.OrdinalIgnoreCase);
+        if (useEphemeralKeys)
         {
             PreConfigure<AbpOpenIddictAspNetCoreOptions>(options =>
             {
