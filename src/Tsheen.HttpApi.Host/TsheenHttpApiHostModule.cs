@@ -115,11 +115,24 @@ public class TsheenHttpApiHostModule : AbpModule
         {
             Configure<AbpVirtualFileSystemOptions>(options =>
             {
-                options.FileSets.ReplaceEmbeddedByPhysical<TsheenDomainSharedModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}Tsheen.Domain.Shared"));
-                options.FileSets.ReplaceEmbeddedByPhysical<TsheenDomainModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}Tsheen.Domain"));
-                options.FileSets.ReplaceEmbeddedByPhysical<TsheenApplicationContractsModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}Tsheen.Application.Contracts"));
-                options.FileSets.ReplaceEmbeddedByPhysical<TsheenApplicationModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}Tsheen.Application"));
+                ReplaceEmbeddedByPhysicalWhenPresent<TsheenDomainSharedModule>(options, hostingEnvironment, "Tsheen.Domain.Shared");
+                ReplaceEmbeddedByPhysicalWhenPresent<TsheenDomainModule>(options, hostingEnvironment, "Tsheen.Domain");
+                ReplaceEmbeddedByPhysicalWhenPresent<TsheenApplicationContractsModule>(options, hostingEnvironment, "Tsheen.Application.Contracts");
+                ReplaceEmbeddedByPhysicalWhenPresent<TsheenApplicationModule>(options, hostingEnvironment, "Tsheen.Application");
             });
+        }
+    }
+
+    private static void ReplaceEmbeddedByPhysicalWhenPresent<TModule>(
+        AbpVirtualFileSystemOptions options,
+        IHostEnvironment hostingEnvironment,
+        string projectDirectory)
+        where TModule : class
+    {
+        var path = Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}{projectDirectory}");
+        if (Directory.Exists(path))
+        {
+            options.FileSets.ReplaceEmbeddedByPhysical<TModule>(path);
         }
     }
 

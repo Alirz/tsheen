@@ -1,0 +1,9 @@
+**/bin
+**/obj
+**/node_modules
+.git
+.docker
+**/*.pfx
+**/Logs
+**/*.log
+**/appsettings.secrets.json

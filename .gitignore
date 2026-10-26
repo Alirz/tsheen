@@ -283,6 +283,9 @@ src/Tsheen.Blazor.Server.Tiered/Logs/*
 tempkey.rsa
 tempkey.jwk
 
+# Local Docker TLS material. Generated on the machine; do not commit.
+.docker/certs/
+
 # Chief of staff run state and ephemeral test-agent artifacts
 .cursor/state/tasks/active-task.md
 .cursor/state/tasks/archive/

@@ -1,14 +1,14 @@
 {
   "Tsheen.slnx": {
-    "mtime": 1792854639.7561493,
-    "seen": 1792854873.5173411,
-    "ast_hash": "a321e8e71b79b775187f5bedd48fc72d",
+    "mtime": 1793005490.7486286,
+    "seen": 1793006579.8546696,
+    "ast_hash": "d2cdd90bdc9a0f5e689900ca4a3c3e1a",
     "semantic_hash": ""
   },
   "apps/react/dynamic-env.json": {
-    "mtime": 1792854057.052135,
-    "seen": 1792854119.7142968,
-    "ast_hash": "3b8dd9facb9f143cbd8c6aadfc2596d6",
+    "mtime": 1793005491.2817786,
+    "seen": 1793006579.854676,
+    "ast_hash": "022b6785ccbd1782682cafc04865b986",
     "semantic_hash": ""
   },
   "apps/react/package.json": {
@@ -18,9 +18,9 @@
     "semantic_hash": ""
   },
   "apps/react/public/dynamic-env.json": {
-    "mtime": 1792854057.517744,
-    "seen": 1792854119.7143166,
-    "ast_hash": "3b8dd9facb9f143cbd8c6aadfc2596d6",
+    "mtime": 1793005491.4478877,
+    "seen": 1793006579.8546846,
+    "ast_hash": "022b6785ccbd1782682cafc04865b986",
     "semantic_hash": ""
   },
   "apps/react/src/App.tsx": {
@@ -42,9 +42,9 @@
     "semantic_hash": ""
   },
   "apps/react/src/env.ts": {
-    "mtime": 1792854056.428245,
-    "seen": 1792854119.7144318,
-    "ast_hash": "5bbfd98ccf8422a4f4b8ac726c784fdd",
+    "mtime": 1793005491.150842,
+    "seen": 1793006579.8547318,
+    "ast_hash": "b3f9ce1f27f158f715f8a38c9da290f1",
     "semantic_hash": ""
   },
   "apps/react/src/features/home/HomePage.test.tsx": {
@@ -192,9 +192,9 @@
     "semantic_hash": ""
   },
   "etc/abp-studio/run-profiles/Default.abprun.json": {
-    "mtime": 1792854640.6420257,
-    "seen": 1792854873.5174937,
-    "ast_hash": "b9ae8f40f7eb86fe3e3c3f1a84eaba1a",
+    "mtime": 1793005493.113292,
+    "seen": 1793006579.8548112,
+    "ast_hash": "abbec18c80a843e69965c17bee52277b",
     "semantic_hash": ""
   },
   "etc/scripts/initialize-solution.ps1": {
@@ -330,9 +330,9 @@
     "semantic_hash": ""
   },
   "src/Tsheen.Domain.Shared/Localization/Tsheen/en.json": {
-    "mtime": 1792918397.057139,
-    "seen": 1792918547.56072,
-    "ast_hash": "160560ea08f7f9169c84b49b61a15165",
+    "mtime": 1793005494.1832068,
+    "seen": 1793006579.854936,
+    "ast_hash": "58e9fe36f31a61b97cd078ca1c2a2542",
     "semantic_hash": ""
   },
   "src/Tsheen.Domain.Shared/Localization/Tsheen/es.json": {
@@ -450,9 +450,9 @@
     "semantic_hash": ""
   },
   "src/Tsheen.Domain.Shared/TsheenDomainSharedModule.cs": {
-    "mtime": 1792913616.3686926,
-    "seen": 1792913840.245229,
-    "ast_hash": "9eb11d35b246416cf24ab1c7e3b4b26c",
+    "mtime": 1793005494.0571718,
+    "seen": 1793006579.854991,
+    "ast_hash": "ee3c5a75ad6d8b7bff911b799437dfd8",
     "semantic_hash": ""
   },
   "src/Tsheen.Domain.Shared/TsheenGlobalFeatureConfigurator.cs": {
@@ -630,15 +630,15 @@
     "semantic_hash": ""
   },
   "src/Tsheen.HttpApi.Host/Tsheen.HttpApi.Host.csproj": {
-    "mtime": 1792854638.632742,
-    "seen": 1792854873.517715,
-    "ast_hash": "29aa62da3971e4d2c42c30919b4cfdf3",
+    "mtime": 1793005492.873619,
+    "seen": 1793006579.8550699,
+    "ast_hash": "a346b49d4dd8da624a1c12ede0a24b40",
     "semantic_hash": ""
   },
   "src/Tsheen.HttpApi.Host/TsheenHttpApiHostModule.cs": {
-    "mtime": 1792854636.3750162,
-    "seen": 1792854873.5177176,
-    "ast_hash": "1d11e13a59f57450c13059ba6aba3198",
+    "mtime": 1793013877.344047,
+    "seen": 1793014083.0505283,
+    "ast_hash": "7078826e9334580591161433c59bff33",
     "semantic_hash": ""
   },
   "src/Tsheen.HttpApi.Host/appsettings.Development.json": {
@@ -804,9 +804,9 @@
     "semantic_hash": ""
   },
   "test/Tsheen.HttpApi.Client.ConsoleTestApp/appsettings.json": {
-    "mtime": 1792855925.183926,
-    "seen": 1792859138.4025261,
-    "ast_hash": "1f5c406a4541b34d07b6d0c1df1d3c52",
+    "mtime": 1793005493.2676277,
+    "seen": 1793006579.8551462,
+    "ast_hash": "e7a81894cfa339a66937ab79b12d6b57",
     "semantic_hash": ""
   },
   "test/Tsheen.TestBase/Security/FakeCurrentPrincipalAccessor.cs": {
@@ -1182,33 +1182,33 @@
     "semantic_hash": ""
   },
   "apps/react/src/lib/api/axios.test.ts": {
-    "mtime": 1792852165.7112045,
-    "seen": 1792852640.888305,
-    "ast_hash": "74b23a61ccdc49e0fd5d9087d43c3fa7",
+    "mtime": 1793005490.8451855,
+    "seen": 1793006579.8547485,
+    "ast_hash": "c8adc29e1f8259c8f8986e69c9826720",
     "semantic_hash": ""
   },
   "apps/react/src/lib/auth/oidc.test.ts": {
-    "mtime": 1792854057.8144326,
-    "seen": 1792854119.7144938,
-    "ast_hash": "02c70aed739b8c27f576c1cdfe59b249",
+    "mtime": 1793005490.9979155,
+    "seen": 1793006579.8547564,
+    "ast_hash": "5cca2b43c35d1f0f06488617c59c9224",
     "semantic_hash": ""
   },
   "test/Tsheen.HttpApi.Host.Tests/LocalOpenIddictJwtHostTests.cs": {
-    "mtime": 1792858913.5741975,
-    "seen": 1792859138.4025357,
-    "ast_hash": "07851a641ca9b2f488a0325e5be6f5cf",
+    "mtime": 1793005490.64283,
+    "seen": 1793006579.855157,
+    "ast_hash": "e5a5695bc637b85c38314a3ae59d0c4a",
     "semantic_hash": ""
   },
   "test/Tsheen.HttpApi.Host.Tests/Tsheen.HttpApi.Host.Tests.csproj": {
-    "mtime": 1792855924.2531443,
-    "seen": 1792859138.4025383,
-    "ast_hash": "bf05c929b2fa225358b9d70e8e42f60d",
+    "mtime": 1793005490.4815845,
+    "seen": 1793006579.8551593,
+    "ast_hash": "bdba46ffd067249ffc95e99ca318384e",
     "semantic_hash": ""
   },
   "test/Tsheen.HttpApi.Host.Tests/TsheenLocalJwtHostFactory.cs": {
-    "mtime": 1792858755.1236172,
-    "seen": 1792859138.4025433,
-    "ast_hash": "7454f2623d1f18570f0fa654f03497d5",
+    "mtime": 1793005490.5707953,
+    "seen": 1793006579.855164,
+    "ast_hash": "4383524a0b9bfea807510e2f9c574f9f",
     "semantic_hash": ""
   },
   "src/Tsheen.AuthServer/Pages/Index.cshtml": {
@@ -1230,27 +1230,27 @@
     "semantic_hash": ""
   },
   "src/Tsheen.AuthServer/Program.cs": {
-    "mtime": 1792854654.0170548,
-    "seen": 1792854873.5175526,
-    "ast_hash": "fa102c1d93da889e4ee7c9e4b61e512e",
+    "mtime": 1793005492.1344528,
+    "seen": 1793006579.8548656,
+    "ast_hash": "ba182e82e0fd5fdbbdfd4f67c4518e61",
     "semantic_hash": ""
   },
   "src/Tsheen.AuthServer/Properties/launchSettings.json": {
-    "mtime": 1792854623.928699,
-    "seen": 1792854873.5175548,
-    "ast_hash": "88963a231b0af9ff13b268bdb436bffa",
+    "mtime": 1793005492.5341835,
+    "seen": 1793006579.85487,
+    "ast_hash": "4c9683f8741755f117891570720ce0b4",
     "semantic_hash": ""
   },
   "src/Tsheen.AuthServer/Tsheen.AuthServer.csproj": {
-    "mtime": 1792854604.0196135,
-    "seen": 1792854873.5175564,
-    "ast_hash": "7e7b144321b772aa7e2028572e7370ca",
+    "mtime": 1793005491.6773684,
+    "seen": 1793006579.8548741,
+    "ast_hash": "a6730598ee06b57d312b4fc277b827fb",
     "semantic_hash": ""
   },
   "src/Tsheen.AuthServer/TsheenAuthServerModule.cs": {
-    "mtime": 1792913639.6356878,
-    "seen": 1792913840.2451618,
-    "ast_hash": "cf3f93418a22a9cade4fb3f6e21eaecc",
+    "mtime": 1793013873.9671571,
+    "seen": 1793014083.0503309,
+    "ast_hash": "2e89f9b6ef2135514e07c722e4432a04",
     "semantic_hash": ""
   },
   "src/Tsheen.AuthServer/TsheenBrandingProvider.cs": {
@@ -1266,9 +1266,9 @@
     "semantic_hash": ""
   },
   "src/Tsheen.AuthServer/appsettings.Development.json": {
-    "mtime": 1792854623.928699,
-    "seen": 1792854873.5175653,
-    "ast_hash": "530c6e5283b8e108278275647eada966",
+    "mtime": 1793005492.6664982,
+    "seen": 1793006579.854893,
+    "ast_hash": "02b28b1ce2bc64cc6783c10fde69cad9",
     "semantic_hash": ""
   },
   "src/Tsheen.AuthServer/appsettings.json": {
@@ -1338,45 +1338,45 @@
     "semantic_hash": ""
   },
   "test/Tsheen.HttpApi.Host.Tests/AuthServerLoginJwtTests.cs": {
-    "mtime": 1792855959.986136,
-    "seen": 1792859138.40253,
-    "ast_hash": "1d312b3f6e5078a8ed467977d73cf031",
+    "mtime": 1793005493.930933,
+    "seen": 1793006579.8551517,
+    "ast_hash": "9500704dfa3ef47c826e7a55afd3853b",
     "semantic_hash": ""
   },
   "test/Tsheen.HttpApi.Host.Tests/JwtTokenReader.cs": {
-    "mtime": 1792855951.600686,
-    "seen": 1792859138.402533,
-    "ast_hash": "405b9d6f4d3d5cdd4bc3da8b05540623",
+    "mtime": 1793005493.7574804,
+    "seen": 1793006579.8551543,
+    "ast_hash": "4e511c6bef1e1fc9005e01a7d2d498ac",
     "semantic_hash": ""
   },
   "test/Tsheen.HttpApi.Host.Tests/TsheenAuthServerHostFactory.cs": {
-    "mtime": 1792855932.9755876,
-    "seen": 1792859138.4025407,
-    "ast_hash": "0e6d9d9f101cf32bf2b35d7ecc254579",
+    "mtime": 1793005493.4645815,
+    "seen": 1793006579.855162,
+    "ast_hash": "95e0da2dcbc53d085a8f9d0104395479",
     "semantic_hash": ""
   },
   "test/Tsheen.HttpApi.Host.Tests/TsheenSsoHostFixture.cs": {
-    "mtime": 1792856364.1712525,
-    "seen": 1792859138.4025457,
-    "ast_hash": "8344d89ae1224b20b67a9f02c9839362",
+    "mtime": 1793005493.6226888,
+    "seen": 1793006579.8551664,
+    "ast_hash": "8d75c570e79e9f8d33a28583c1f5bed3",
     "semantic_hash": ""
   },
   "src/Tsheen.AuthServer/Pages/Account/Login.cshtml": {
-    "mtime": 1792920182.1783662,
-    "seen": 1792920337.3084497,
-    "ast_hash": "59389b79dd684682516ca4cba91abccd",
+    "mtime": 1793005494.809743,
+    "seen": 1793006579.8548474,
+    "ast_hash": "33d106f49b2ccbcdd6119cfbe26accdd",
     "semantic_hash": ""
   },
   "src/Tsheen.Domain.Shared/Localization/Tsheen/fa.json": {
-    "mtime": 1792918395.0142014,
-    "seen": 1792918547.5607285,
-    "ast_hash": "e1654a871a20ac5bca72ca813ff1f4a8",
+    "mtime": 1793005494.6423712,
+    "seen": 1793006579.8549414,
+    "ast_hash": "d7f4b582054a4fb31af03f698d4f29cb",
     "semantic_hash": ""
   },
   "test/Tsheen.HttpApi.Host.Tests/AuthServerLoginCultureTests.cs": {
-    "mtime": 1792920498.301609,
-    "seen": 1792920611.9086158,
-    "ast_hash": "1ec4283421c330977e4095696632cbe1",
+    "mtime": 1793005495.0057282,
+    "seen": 1793006579.8551488,
+    "ast_hash": "c0b3fe5fa1771eb0bf4bf91d9d8f7d5a",
     "semantic_hash": ""
   },
   "figma/tsheen.pdf": {
@@ -1395,6 +1395,24 @@
     "mtime": 1792918250.8476696,
     "seen": 1792918547.5611217,
     "ast_hash": "205ee45cf1497c6e8ddcd963f6e25e63",
+    "semantic_hash": ""
+  },
+  "docker-compose.yml": {
+    "mtime": 1793007072.15857,
+    "seen": 1793014083.0502715,
+    "ast_hash": "d51462b0b2b232f03f08bbfc7686179f",
+    "semantic_hash": ""
+  },
+  "docker/nginx-entrypoint.sh": {
+    "mtime": 1793006403.4926865,
+    "seen": 1793006579.8548086,
+    "ast_hash": "b59fd93018b02c320549d884c69a8981",
+    "semantic_hash": ""
+  },
+  "docker/scrub-appsettings.py": {
+    "mtime": 1793006841.3581789,
+    "seen": 1793014083.050279,
+    "ast_hash": "cb13805ccbcf29b42072d484b5a766ca",
     "semantic_hash": ""
   }
 }

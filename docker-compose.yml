@@ -1,0 +1,61 @@
+services:
+  migrator:
+    build:
+      context: .
+      dockerfile: docker/dbmigrator.Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__Default: "${TSHEEN_CONNECTION_STRING}"
+      OpenIddict__Applications__Tsheen_App__RootUrl: http://localhost:3000
+      OpenIddict__Applications__Tsheen_Swagger__RootUrl: http://localhost:44365/
+
+  authserver:
+    build:
+      context: .
+      dockerfile: src/Tsheen.AuthServer/Dockerfile
+    ports:
+      - "44366:44366"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:44366
+      ASPNETCORE_HTTP_PORTS: "44366"
+      App__SelfUrl: http://localhost:44366
+      App__CorsOrigins: http://localhost:3000,http://localhost:44365
+      App__RedirectAllowedUrls: http://localhost:3000,http://localhost:44365
+      AuthServer__Authority: http://localhost:44366
+      AuthServer__RequireHttpsMetadata: "false"
+      ConnectionStrings__Default: "${TSHEEN_CONNECTION_STRING}"
+    depends_on:
+      migrator:
+        condition: service_completed_successfully
+
+  httpapi:
+    build:
+      context: .
+      dockerfile: docker/httpapi.Dockerfile
+    ports:
+      - "44365:44365"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:44365
+      ASPNETCORE_HTTP_PORTS: "44365"
+      App__SelfUrl: http://localhost:44365
+      App__CorsOrigins: http://localhost:3000
+      App__RedirectAllowedUrls: http://localhost:3000
+      AuthServer__Authority: http://localhost:44366
+      AuthServer__RequireHttpsMetadata: "false"
+      ConnectionStrings__Default: "${TSHEEN_CONNECTION_STRING}"
+    depends_on:
+      migrator:
+        condition: service_completed_successfully
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/react/Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      APP_BASE_URL: http://localhost:3000
+      AUTH_ISSUER: http://localhost:44366/
+      API_URL: http://localhost:44365
