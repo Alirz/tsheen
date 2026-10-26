@@ -1,7 +1,7 @@
 {
   "Tsheen.slnx": {
-    "mtime": 1793005490.7486286,
-    "seen": 1793006579.8546696,
+    "mtime": 1793016175.0830266,
+    "seen": 1793022013.7040818,
     "ast_hash": "d2cdd90bdc9a0f5e689900ca4a3c3e1a",
     "semantic_hash": ""
   },
@@ -18,8 +18,8 @@
     "semantic_hash": ""
   },
   "apps/react/public/dynamic-env.json": {
-    "mtime": 1793005491.4478877,
-    "seen": 1793006579.8546846,
+    "mtime": 1793016175.0795004,
+    "seen": 1793022013.7041025,
     "ast_hash": "022b6785ccbd1782682cafc04865b986",
     "semantic_hash": ""
   },
@@ -450,8 +450,8 @@
     "semantic_hash": ""
   },
   "src/Tsheen.Domain.Shared/TsheenDomainSharedModule.cs": {
-    "mtime": 1793005494.0571718,
-    "seen": 1793006579.854991,
+    "mtime": 1793016175.0673127,
+    "seen": 1793022013.7052717,
     "ast_hash": "ee3c5a75ad6d8b7bff911b799437dfd8",
     "semantic_hash": ""
   },
@@ -630,8 +630,8 @@
     "semantic_hash": ""
   },
   "src/Tsheen.HttpApi.Host/Tsheen.HttpApi.Host.csproj": {
-    "mtime": 1793005492.873619,
-    "seen": 1793006579.8550699,
+    "mtime": 1793016175.0718808,
+    "seen": 1793022013.7055202,
     "ast_hash": "a346b49d4dd8da624a1c12ede0a24b40",
     "semantic_hash": ""
   },
@@ -804,8 +804,8 @@
     "semantic_hash": ""
   },
   "test/Tsheen.HttpApi.Client.ConsoleTestApp/appsettings.json": {
-    "mtime": 1793005493.2676277,
-    "seen": 1793006579.8551462,
+    "mtime": 1793016175.0602403,
+    "seen": 1793022013.705739,
     "ast_hash": "e7a81894cfa339a66937ab79b12d6b57",
     "semantic_hash": ""
   },
@@ -1182,33 +1182,33 @@
     "semantic_hash": ""
   },
   "apps/react/src/lib/api/axios.test.ts": {
-    "mtime": 1793005490.8451855,
-    "seen": 1793006579.8547485,
-    "ast_hash": "c8adc29e1f8259c8f8986e69c9826720",
+    "mtime": 1793017160.2491643,
+    "seen": 1793022013.7042189,
+    "ast_hash": "74b23a61ccdc49e0fd5d9087d43c3fa7",
     "semantic_hash": ""
   },
   "apps/react/src/lib/auth/oidc.test.ts": {
-    "mtime": 1793005490.9979155,
-    "seen": 1793006579.8547564,
-    "ast_hash": "5cca2b43c35d1f0f06488617c59c9224",
+    "mtime": 1793017160.2537217,
+    "seen": 1793022013.704235,
+    "ast_hash": "02c70aed739b8c27f576c1cdfe59b249",
     "semantic_hash": ""
   },
   "test/Tsheen.HttpApi.Host.Tests/LocalOpenIddictJwtHostTests.cs": {
-    "mtime": 1793005490.64283,
-    "seen": 1793006579.855157,
+    "mtime": 1793016175.0804996,
+    "seen": 1793022013.7057679,
     "ast_hash": "e5a5695bc637b85c38314a3ae59d0c4a",
     "semantic_hash": ""
   },
   "test/Tsheen.HttpApi.Host.Tests/Tsheen.HttpApi.Host.Tests.csproj": {
-    "mtime": 1793005490.4815845,
-    "seen": 1793006579.8551593,
-    "ast_hash": "bdba46ffd067249ffc95e99ca318384e",
+    "mtime": 1793017160.277484,
+    "seen": 1793022013.705773,
+    "ast_hash": "bf05c929b2fa225358b9d70e8e42f60d",
     "semantic_hash": ""
   },
   "test/Tsheen.HttpApi.Host.Tests/TsheenLocalJwtHostFactory.cs": {
-    "mtime": 1793005490.5707953,
-    "seen": 1793006579.855164,
-    "ast_hash": "4383524a0b9bfea807510e2f9c574f9f",
+    "mtime": 1793017160.2820115,
+    "seen": 1793022013.7057843,
+    "ast_hash": "7454f2623d1f18570f0fa654f03497d5",
     "semantic_hash": ""
   },
   "src/Tsheen.AuthServer/Pages/Index.cshtml": {
@@ -1236,21 +1236,21 @@
     "semantic_hash": ""
   },
   "src/Tsheen.AuthServer/Properties/launchSettings.json": {
-    "mtime": 1793005492.5341835,
-    "seen": 1793006579.85487,
-    "ast_hash": "4c9683f8741755f117891570720ce0b4",
+    "mtime": 1793017160.2579954,
+    "seen": 1793022013.7044432,
+    "ast_hash": "88963a231b0af9ff13b268bdb436bffa",
     "semantic_hash": ""
   },
   "src/Tsheen.AuthServer/Tsheen.AuthServer.csproj": {
-    "mtime": 1793005491.6773684,
-    "seen": 1793006579.8548741,
-    "ast_hash": "a6730598ee06b57d312b4fc277b827fb",
+    "mtime": 1793017160.2642927,
+    "seen": 1793022013.7044482,
+    "ast_hash": "7e7b144321b772aa7e2028572e7370ca",
     "semantic_hash": ""
   },
   "src/Tsheen.AuthServer/TsheenAuthServerModule.cs": {
-    "mtime": 1793013873.9671571,
-    "seen": 1793014083.0503309,
-    "ast_hash": "2e89f9b6ef2135514e07c722e4432a04",
+    "mtime": 1793021957.8757188,
+    "seen": 1793022013.7044532,
+    "ast_hash": "970d380a46c7a40ce7266bace4259b97",
     "semantic_hash": ""
   },
   "src/Tsheen.AuthServer/TsheenBrandingProvider.cs": {
@@ -1266,9 +1266,9 @@
     "semantic_hash": ""
   },
   "src/Tsheen.AuthServer/appsettings.Development.json": {
-    "mtime": 1793005492.6664982,
-    "seen": 1793006579.854893,
-    "ast_hash": "02b28b1ce2bc64cc6783c10fde69cad9",
+    "mtime": 1793017160.267881,
+    "seen": 1793022013.70447,
+    "ast_hash": "530c6e5283b8e108278275647eada966",
     "semantic_hash": ""
   },
   "src/Tsheen.AuthServer/appsettings.json": {
@@ -1344,15 +1344,15 @@
     "semantic_hash": ""
   },
   "test/Tsheen.HttpApi.Host.Tests/JwtTokenReader.cs": {
-    "mtime": 1793005493.7574804,
-    "seen": 1793006579.8551543,
-    "ast_hash": "4e511c6bef1e1fc9005e01a7d2d498ac",
+    "mtime": 1793017160.2724254,
+    "seen": 1793022013.7057607,
+    "ast_hash": "405b9d6f4d3d5cdd4bc3da8b05540623",
     "semantic_hash": ""
   },
   "test/Tsheen.HttpApi.Host.Tests/TsheenAuthServerHostFactory.cs": {
-    "mtime": 1793005493.4645815,
-    "seen": 1793006579.855162,
-    "ast_hash": "95e0da2dcbc53d085a8f9d0104395479",
+    "mtime": 1793021958.175094,
+    "seen": 1793022013.7057781,
+    "ast_hash": "da4f081f5a3883730554ed2b9a28ec7c",
     "semantic_hash": ""
   },
   "test/Tsheen.HttpApi.Host.Tests/TsheenSsoHostFixture.cs": {
@@ -1377,12 +1377,6 @@
     "mtime": 1793005495.0057282,
     "seen": 1793006579.8551488,
     "ast_hash": "c0b3fe5fa1771eb0bf4bf91d9d8f7d5a",
-    "semantic_hash": ""
-  },
-  "figma/tsheen.pdf": {
-    "mtime": 1788773302.27975,
-    "seen": 1792918547.5610619,
-    "ast_hash": "86b5b000bc318a8b473fa19fda2ab2bd",
     "semantic_hash": ""
   },
   "src/Tsheen.AuthServer/wwwroot/images/login-gold-bars.jpeg": {
@@ -1413,6 +1407,12 @@
     "mtime": 1793006841.3581789,
     "seen": 1793014083.050279,
     "ast_hash": "cb13805ccbcf29b42072d484b5a766ca",
+    "semantic_hash": ""
+  },
+  ".cursor/settings.json": {
+    "mtime": 1793017276.7055018,
+    "seen": 1793022013.7040694,
+    "ast_hash": "6b0f3e069608f325b29e3ad15ef9ce90",
     "semantic_hash": ""
   }
 }

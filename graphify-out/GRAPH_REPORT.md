@@ -1,7 +1,7 @@
 # Graph Report - tsheen  (2026-10-26)
 
 ## Corpus Check
-- 205 files · ~41,306 words
+- 206 files · ~41,351 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 62 file(s) not represented in the graph (top: .mdc 15, .abppkg 14, (none) 11)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5f080568`
+- Built from commit: `951ad24c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -376,7 +376,7 @@ Nodes (6): Microsoft.AspNetCore.Authentication.JwtBearer (10.0.11), Microsoft.As
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Tsheen` connect `Tsheen` to `TsheenLocalJwtHostFactory.cs`, `system`, `TsheenDomainModule.cs`, `TsheenEntityFrameworkCoreModule.cs`, `TsheenHttpApiHostModule.cs`, `TsheenDomainSharedModule`, `system`?**
-  _High betweenness centrality (0.046) - this node is a cross-community bridge._
+  _High betweenness centrality (0.040) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `TsheenDbContext` (e.g. with `.ConfigureInMemorySqlite()` and `TsheenSsoHostFixture`) actually correct?**
   _`TsheenDbContext` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `node`, `net10.0`, `Volo.Abp.PermissionManagement.Application.Contracts (10.7.0)` to the rest of the system?**
@@ -384,7 +384,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `cn` be split into smaller, more focused modules?**
   _Cohesion score 0.05909090909090909 - nodes in this community are weakly interconnected._
 - **Why does `TsheenDbContext` connect `TsheenDbContext` to `Initial`, `.StartAsync`, `TsheenEntityFrameworkCoreModule.cs`, `TsheenTestBase`, `TsheenSsoHostFixture`, `Task`, `TsheenDbContextFactory`?**
-  _High betweenness centrality (0.022) - this node is a cross-community bridge._
+  _High betweenness centrality (0.021) - this node is a cross-community bridge._
 - **Should `react/package.json` be split into smaller, more focused modules?**
   _Cohesion score 0.08571428571428572 - nodes in this community are weakly interconnected._
 - **Why does `TsheenAuthServerModule` connect `TsheenAuthServerModule` to `system`, `TsheenHttpApiHostModule.cs`, `ServiceConfigurationContext`, `AbpModule`, `TsheenTestBaseModule`, `.PreConfigureServices`?**

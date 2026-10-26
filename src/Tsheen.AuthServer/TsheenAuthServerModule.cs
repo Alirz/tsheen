@@ -68,7 +68,21 @@ public class TsheenAuthServerModule : AbpModule
             serverBuilder.SetIssuer(new Uri(configuration["App:SelfUrl"]!));
         });
 
-        if (!hostingEnvironment.IsDevelopment())
+        // Absent or false keeps the development certificate, or the production pfx outside Development.
+        if (configuration.GetValue<bool>("AuthServer:UseEphemeralEncryptionAndSigningKeys"))
+        {
+            PreConfigure<AbpOpenIddictAspNetCoreOptions>(options =>
+            {
+                options.AddDevelopmentEncryptionAndSigningCertificate = false;
+            });
+
+            PreConfigure<OpenIddictServerBuilder>(serverBuilder =>
+            {
+                serverBuilder.AddEphemeralEncryptionKey();
+                serverBuilder.AddEphemeralSigningKey();
+            });
+        }
+        else if (!hostingEnvironment.IsDevelopment())
         {
             PreConfigure<AbpOpenIddictAspNetCoreOptions>(options =>
             {

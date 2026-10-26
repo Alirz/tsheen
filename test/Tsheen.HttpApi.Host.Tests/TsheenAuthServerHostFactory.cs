@@ -110,6 +110,7 @@ public sealed class TsheenAuthServerHostFactory : WebApplicationFactory<AuthServ
             ["ConnectionStrings:Default"] = _database.ConnectionString,
             ["AuthServer:Authority"] = Issuer,
             ["AuthServer:RequireHttpsMetadata"] = "false",
+            ["AuthServer:UseEphemeralEncryptionAndSigningKeys"] = "true",
             ["AuthServer:SwaggerClientId"] = SwaggerClientId,
             ["App:SelfUrl"] = Issuer,
             ["App:CorsOrigins"] = AppRootUrl,
